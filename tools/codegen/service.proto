@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package hello;
+
+message ServiceRequest {
+    string Name = 1;
+}
+
+message ServcieRepsonse {
+    string relay = 1;
+}
+
+service MyService {
+    rpc WelcomeService(ServiceRequest) returns (ServcieRepsonse) {};
+}
